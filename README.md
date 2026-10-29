@@ -22,19 +22,17 @@ npm run build
 npm run preview
 ```
 
-## Deploy to the domain
+## Live links
 
-This is a static SPA. Deploy the `dist/` folder to any static host (Netlify, Vercel, Cloudflare Pages, S3+CloudFront, or your existing web host).
+- **GitHub:** https://github.com/vikas07/swa-manjulabai-foundation
+- **Vercel (production):** https://personal-ten-lemon-54.vercel.app  
+  Project: `swa-manjulabai-foundation` (connected to the GitHub repo — pushes to `main` auto-deploy)
 
-1. Point `swamanjulabaifoundation.org` DNS to your host.
-2. Set the publish directory to `dist`.
-3. Add an SPA fallback so all routes serve `index.html`.
+### Custom domain (`swamanjulabaifoundation.org`)
 
-Example `public/_redirects` (Netlify) is already optional — add if needed:
+In the [Vercel project → Settings → Domains](https://vercel.com/vikas07s-projects/swa-manjulabai-foundation/settings/domains), add `swamanjulabaifoundation.org` and point DNS as Vercel instructs.
 
-```
-/*    /index.html   200
-```
+SPA routing is handled by `vercel.json` rewrites.
 
 ## Payments (Razorpay & PayPal)
 
